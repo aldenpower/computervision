@@ -6,6 +6,10 @@ class Image():
     def __init__(self, img):
         self.img_ = io.imread(img)
 
+    def shape(self):
+        print("(largura, altura, canais)")
+        print(self.img_.shape)
+
     def conversion(self, tipo):
         if tipo == 'rgb':
             converted = cv2.cvtColor(self.img_, cv2.COLOR_BGR2RGB)
